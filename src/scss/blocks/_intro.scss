@@ -1,0 +1,88 @@
+.intro {
+    height: 58rem;
+    margin-bottom: 13rem;
+
+    @include laptopL-bp {
+        overflow-x: hidden;
+    }
+
+    @include laptop-bp {
+        margin-bottom: 11rem;
+        overflow-x: hidden;
+    }
+
+    @include tablet-bp {
+        margin-bottom: 7rem;
+        overflow-x: hidden;
+    }
+
+    @include mobile-bp {
+        margin-bottom: 2rem;
+    }
+}
+
+.intro__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+.intro__left {
+    width: 66rem;
+    flex-shrink: 0;
+
+    position: relative;
+    z-index: 1;
+
+    @include tablet-bp {
+        width: 55rem;
+    }
+
+    @include mobile-bp {
+        width: 100%;
+    }
+}
+
+.intro__title {
+    font-family: $font-secondary;
+    font-size: 5.4rem;
+    line-height: normal;
+    text-transform: uppercase;
+
+    margin-bottom: 3rem;
+
+    @include laptop-bp {
+        font-size: 4.8rem;
+    }
+
+    @include tablet-bp {
+        font-size: 3.8rem;
+    }
+
+    @include mobile-bp {
+        font-size: 2.5rem;
+    }
+}
+
+.intro__text {
+    text-transform: capitalize;
+    width: 80%;
+
+    margin-bottom: 5rem;
+}
+
+.intro__right {
+    width: 50%;
+    height: 58rem;
+
+    position: absolute;
+    left: 50%;
+    z-index: 0;
+
+
+    @include tablet-bp {
+        left: 35%;
+        top: -4rem;
+    }
+}

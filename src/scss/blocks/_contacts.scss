@@ -1,0 +1,136 @@
+.contacts {
+    padding: 5rem 0;
+    border-top: 1px solid rgba($white, 60%);
+}
+
+.contacts__wrapper {
+    display: flex;
+
+    @include tablet-bp {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+}
+
+.contacts__left {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+
+    @include tablet-bp {
+        align-items: center;
+    }
+
+    @include mobile-bp {
+        width: 90%;
+        gap: 2rem;
+    }
+}
+
+.contacts__title {
+    font-size: 1.6rem;
+    color: rgba($white, 60%);
+
+    margin-bottom: 1rem;
+
+    @include tablet-bp {
+        font-size: 1.4rem;
+    }
+
+    @include mobile-bp {
+        font-size: 1.2rem;
+    }
+}
+
+.contacts__number {
+    font-size: 2.4rem;
+
+    @include tablet-bp {
+        font-size: 2rem;
+    }
+}
+
+.contacts__text {
+    text-transform: capitalize;
+}
+
+.contacts__right {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include tablet-bp {
+        align-items: center;
+    }
+
+    @include mobile-bp {
+        width: 90%;
+    }
+}
+
+.contacts__socials {
+    display: flex;
+    gap: 4rem;
+
+    margin-top: 3rem;
+
+    @include mobile-bp {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+.contacts__social {
+    width: 18.7rem;
+    height: 13.7rem;
+    background-color: $secondary;
+    border-radius: 1rem;
+    padding: 1rem;
+    
+    display: flex;;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+
+    transition: background-color .2s ease-in-out;
+
+    @include tablet-bp {
+        width: 16rem;
+        height: 12rem;
+    }
+
+    @include mobile-bp {
+        width: 18.7rem;
+        height: 13.7rem;
+    }
+
+    img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    &:first-child {
+
+        &:hover {
+            background-color: #00D1FF;
+        }
+    }
+
+    &:last-child {
+
+        &:hover {
+            background-color: #C0274C;
+        }
+    }
+}
+
+.contacts__social-text {
+    font-size: 1.6rem;
+    color: $white;
+}

@@ -1,0 +1,243 @@
+.card {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    width: 22.85em;
+    height: 13em;
+
+    background-color: $secondary;
+    border-radius: .71em;
+    padding: 1.05em 1.42em;
+    box-shadow: 0px 0px 32.57812px 0px rgba(0, 0, 0, 0.30);
+
+    position: relative;
+
+    overflow: hidden;
+
+    @include laptop-bp {
+        font-size: 2.21rem;
+    }
+
+    @include tablet-bp {
+        font-size: 2.03rem;
+    }
+
+    @include mobile-bp {
+        font-size: 1.27rem;
+    }
+
+    &.header--first,
+    &.header--second,
+    &.header--third,
+    &.header--fourth {
+
+        @include tablet-bp {
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($black, 50%);
+                z-index: 100;
+            }
+        }
+    }
+
+    &.header--first {
+        font-size: 1.82rem;
+        z-index: 4;
+
+        @include laptop-bp {
+            font-size: 1.72rem;
+        }
+    }
+
+    &.header--second {
+        font-size: 1.66rem;
+        z-index: 3;
+
+        top: -11.3rem;
+        right: -25rem;
+
+        @include laptop-bp {
+            font-size: 1.56rem;
+        }
+    }
+
+    &.header--third {
+        font-size: 1.55rem;
+        z-index: 2;
+
+        top: -17rem;
+        right: -3rem;
+
+        @include laptop-bp {
+            font-size: 1.45rem;
+        }
+    }
+
+    &.header--fourth {
+        font-size: 1.48rem;
+        z-index: 1;
+
+        top: -26.5rem;
+        right: -25rem;
+
+        @include laptop-bp {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.card__cube {
+    width: 15em;
+    height: 15em;
+    border-radius: 1.07em;
+    box-shadow: 0px 0px 32.57812px 0px rgba($black, 0.30);
+
+    transform: rotate(30deg);
+    position: absolute;
+    left: 11.12em;
+    bottom: .8em;
+
+    z-index: 0;
+
+    &.black {
+        background: linear-gradient(180deg, #303030 45.55%, #151515 84.72%);
+    }
+
+    &.yellow {
+        background: linear-gradient(180deg, #FFBF00 48.03%, #FFC928 85.14%);
+    }
+
+    &.white {
+        background: linear-gradient(180deg, #FFF 49.36%, #DEDEDE 92.36%);
+    }
+
+    &.blue {
+        background: linear-gradient(180deg, #012174 51.95%, #011445 90.26%);
+    }
+}
+
+.card__logo {
+    width: 7.07em;
+
+    z-index: 1;
+}
+
+.card__logo-img {
+    width: 100%;
+}
+
+.card__rank {
+    font-family: $font-secondary;
+    text-align: end;
+
+    position: relative;
+    bottom: 1.5em;
+
+    z-index: 1;
+
+    &--first {
+        bottom: 0;
+    }
+
+    &--black {
+        color: $secondary;
+    }
+}
+
+.card__name {
+    font-family: $font-secondary;
+    font-size: 0.71em;
+
+    z-index: 1;
+
+    position: absolute;
+    bottom: 1.05em;
+}
+
+// card__data
+.card__data {
+    font-size: 1.6rem;
+    width: 40em;
+    height: 22.8em;
+    padding: 1.87em 3.12em 1.87em 1.87em;
+    border-radius: 1.25em;
+    background-color: $secondary;
+    box-shadow: 0px 10px 40px 0px rgba($black, 0.30);
+
+    overflow: hidden;
+
+    position: relative;
+
+    @include laptop-bp {
+        font-size: 1.26rem;
+    }
+
+    @include tablet-bp {
+        font-size: 1.16rem;
+    }
+
+    @include mobile-bp {
+        font-size: .72rem;
+    }
+}
+
+.card__data-info {
+    margin-bottom: 1.25em;
+}
+
+.card__data-feature {
+    font-size: 1em;
+    color: rgba($white, 60%);
+    text-transform: capitalize;
+}
+
+.card__data-value {
+    font-size: 1.5em;
+    line-height: 1.1;
+    text-transform: capitalize;
+}
+
+.card__data-logo {
+    width: 12.5em;
+}
+
+.card__data-logo-img {
+    width: 100%;
+}
+
+.card__data-color {
+    width: 50%;
+    height: 100%;
+    border-radius: 2rem 0 0 2rem;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.30);
+    padding-top: 3rem;
+
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+
+    &.black {
+        background: linear-gradient(143deg, #303030 29.43%, #161616 93.22%);
+    }
+
+    &.yellow {
+        background: linear-gradient(143deg, #FFC929 29.43%, #FFBF01 93.22%);
+    }
+
+    &.white {
+        background: linear-gradient(143deg, #FFF 29.43%, #E0E0E0 93.22%);
+    }
+
+    &.blue {
+        background: linear-gradient(143deg, #0034BA 29.43%, #002381 93.22%);
+    }
+}

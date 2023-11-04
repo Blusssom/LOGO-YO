@@ -1,0 +1,46 @@
+.footer {
+    padding: 3rem 0;
+    border-top: 1px solid rgba($white, 60%);
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet-bp {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+    }
+}
+
+.footer__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+
+    @include tablet-bp {
+        align-items: center;
+    }
+}
+
+.footer__text {
+    text-transform: capitalize;
+    max-width: 29rem;
+    color: $white;
+
+    @include tablet-bp {
+        text-align: center;
+    }
+}
+
+.footer__privacy {
+    color: $white;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

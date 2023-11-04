@@ -1,0 +1,48 @@
+.feedback {
+    padding: 5rem 0;
+    border-top: 1px solid rgba($white, 60%);
+}
+
+.feedback__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    @include tablet-bp {
+        flex-direction: column;
+        gap: 4rem;
+    }
+}
+
+.feedback__title {
+    font-size: 3.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    @include tablet-bp {
+        font-size: 2.8rem;
+    }
+}
+
+.feedback__text {
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 5rem;
+}
+
+.feedback__form-input {
+    font-size: 1.5rem;
+    font-family: $font-primary;
+    text-transform: capitalize;
+
+    padding: 1.5rem;
+    border-bottom: 2px solid $white;
+    border-radius: .5rem .5rem 0 0;
+
+    transition: background-color .2s ease-in-out;
+
+    &:focus {
+        background-color: rgba($white, 10%);
+    }
+}

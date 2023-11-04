@@ -1,0 +1,128 @@
+.tarrifs {
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 15rem;
+
+    @include laptop-bp {
+        margin-bottom: 10rem;
+    }
+
+    @include tablet-bp {
+        margin-bottom: 8rem;
+    }
+
+    @include mobile-bp {
+        margin-bottom: 5rem;
+    }
+}
+
+.tariffs__wrapper {
+    display: flex;
+    gap: 6.5rem;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile-bp {
+        gap: 3rem;
+    }
+}
+
+.tariff {
+    height: 35rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: transform .2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    @include mobile-bp {
+        height: 32rem;
+    }
+}
+
+.tariff__model {
+    font-size: clamp(2rem, 2vw, 2.2rem);
+    font-family: $font-secondary;
+    text-transform: capitalize;
+    line-height: 1.3;
+    width: 27rem;
+}
+
+.tariff__car {
+    width: 27rem;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tariff__car-img {
+    display: block;
+    width: 100%;
+}
+
+.tariff__past-price {
+    color: rgba($white, 60%);
+    text-decoration: line-through;
+    text-transform: capitalize;
+}
+
+.tariff__current-price {
+    font-size: 2.4rem;
+    text-transform: capitalize;
+}
+
+.tariffs__additional {
+    width: 22.7rem;
+    height: 22.7rem;
+    border-radius: 50%;
+    background-color: $secondary;
+    margin-top: -5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    @media screen and (max-width: 1314px) {
+        margin-top: 0;
+    }
+}
+
+.tariffs__additional-num {
+    font-size: 3.6rem;
+    font-family: $font-secondary;
+    text-align: center;
+}
+
+.tariffs__additional-text {
+    font-size: clamp(1.4rem, 3vw, 1.6rem);
+    text-transform: capitalize;
+    text-align: center;
+    width: 17rem;
+}
+
+.tarrifs__line {
+    width: 100%;
+    height: 2px;
+    background-color: $white;
+
+    position: absolute;
+    top: 60%;
+    z-index: -1;
+
+    @media screen and (max-width: 1314px) {
+        display: none;
+    }
+}
